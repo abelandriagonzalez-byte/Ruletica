@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Resultados del Dia - Ruletica Clon</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <header>
+        <div class="logo">🎰 Ruletica Clon - Resultados</div>
+        <nav><a href="index.html">Volver al Inicio</a></nav>
+    </header>
+
+    <section class="resultados-container">
+        <h1>Historial de Resultados de Hoy</h1>
+        <p>Listado cronológico de todos los sorteos ejecutados en esta computadora.</p>
+        
+        <table class="tabla-resultados">
+            <thead>
+                <tr>
+                    <th>Hora del Sorteo</th>
+                    <th>Número</th>
+                    <th>Animalito</th>
+                    <th>Resultado</th>
+                </tr>
+            </thead>
+            <tbody id="tabla-cuerpo">
+                <!-- Se llena dinámicamente -->
+            </tbody>
+        </table>
+    </section>
+
+    <script>
+        document.addEventListener("DOMContentLoaded", () => {
+            const tablaCuerpo = document.getElementById("tabla-cuerpo");
+            if (!tablaCuerpo) return;
+
+            const historial = JSON.parse(localStorage.getItem("historial_memoria_ruleta")) || [];
+
+            if (historial.length === 0) {
+                tablaCuerpo.innerHTML = `<tr><td colspan="4">No se han realizado sorteos el día de hoy. Realiza un juego en la pantalla principal primero.</td></tr>`;
+                return;
+            }
+
+            tablaCuerpo.innerHTML = "";
+            historial.forEach(sorteo => {
+                const fila = document.createElement("tr");
+                fila.innerHTML = `
+                    <td><strong>${sorteo.hora || '--:--'}</strong></td>
+                    <td><span class="badge-num">${sorteo.num}</span></td>
+                    <td>${sorteo.nombre}</td>
+                    <td><img src="${sorteo.imagen}" alt="${sorteo.nombre}"></td>
+                `;
+                tablaCuerpo.appendChild(fila);
+            });
+        });
+    </script>
+</body>
+</html>

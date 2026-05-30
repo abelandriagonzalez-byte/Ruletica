@@ -1,0 +1,239 @@
+/* Estilos Generales */
+body {
+    font-family: 'Arial', sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f4f7f6;
+    color: #333;
+    text-align: center;
+}
+
+header {
+    background-color: #1b4332;
+    color: white;
+    padding: 15px 20px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+header nav a {
+    color: white;
+    text-decoration: none;
+    margin-left: 15px;
+    font-weight: bold;
+}
+
+/* Sección de la Ruleta */
+.hero {
+    background: linear-gradient(135deg, #2d6a4f, #1b4332);
+    color: white;
+    padding: 40px 20px;
+}
+
+.sorteo-box {
+    margin: 20px auto;
+    width: 220px;
+    height: 220px;
+    background: white;
+    padding: 20px;
+    border-radius: 50%;
+    box-shadow: 0 10px 20px rgba(0,0,0,0.3);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+#ruleta-visual {
+    width: 120px;
+    height: 120px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 15px;
+}
+
+#ruleta-visual img {
+    max-width: 100%;
+    max-height: 100%;
+    object-fit: contain;
+}
+
+#ruleta-visual span {
+    font-size: 4rem;
+}
+
+button#btn-girar {
+    background-color: #ffb703;
+    color: #212529;
+    border: none;
+    padding: 10px 20px;
+    font-size: 1rem;
+    font-weight: bold;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: 0.2s;
+}
+
+button#btn-girar:hover {
+    background-color: #fb8500;
+    transform: scale(1.05);
+}
+
+button#btn-girar:disabled {
+    background-color: #ccc;
+    cursor: not-allowed;
+    transform: none;
+}
+
+/* Historial de 5 Sorteos Rápidos */
+.historial-rapido {
+    background-color: #e8f5e9;
+    padding: 20px;
+    margin-top: 10px;
+}
+
+.historial-lista {
+    display: flex;
+    justify-content: center;
+    gap: 15px;
+    flex-wrap: wrap;
+    margin-top: 10px;
+}
+
+.historial-item {
+    background: white;
+    border: 2px solid #2d6a4f;
+    border-radius: 50%;
+    width: 70px;
+    height: 70px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    font-size: 0.75rem;
+    font-weight: bold;
+    box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+    padding: 5px;
+}
+
+.historial-item img {
+    width: 35px;
+    height: 35px;
+    object-fit: contain;
+}
+
+/* Tabla de Premios */
+.grid-premios {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    margin: 20px;
+    flex-wrap: wrap;
+}
+
+.premio-card {
+    background: white;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+    width: 200px;
+}
+
+/* Cuadrícula de Animalitos */
+.grid-animalitos {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(85px, 1fr));
+    gap: 12px;
+    max-width: 900px;
+    margin: 20px auto;
+    padding: 0 20px;
+}
+
+.animal-btn {
+    background: white;
+    border: 2px solid #2d6a4f;
+    padding: 10px 5px;
+    border-radius: 8px;
+    font-weight: bold;
+    cursor: pointer;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 5px;
+    transition: 0.2s;
+}
+
+.animal-btn:hover {
+    background: #e8f5e9;
+    transform: scale(1.03);
+}
+
+.animal-img {
+    width: 50px;
+    height: 50px;
+    object-fit: contain;
+}
+
+.animal-num-badge {
+    background-color: #1b4332;
+    color: white;
+    padding: 2px 6px;
+    border-radius: 4px;
+    font-size: 0.8rem;
+}
+
+/* Tabla de la Página de Resultados */
+.resultados-container {
+    max-width: 700px;
+    margin: 40px auto;
+    background: white;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+}
+
+.tabla-resultados {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 20px;
+}
+
+.tabla-resultados th, .tabla-resultados td {
+    border: 1px solid #ddd;
+    padding: 12px;
+    text-align: center;
+    vertical-align: middle;
+}
+
+.tabla-resultados th {
+    background-color: #1b4332;
+    color: white;
+}
+
+.tabla-resultados tr:nth-child(even) {
+    background-color: #f9f9f9;
+}
+
+.tabla-resultados img {
+    width: 40px;
+    height: 40px;
+    object-fit: contain;
+}
+
+.badge-num {
+    background: #ffb703;
+    padding: 3px 8px;
+    border-radius: 4px;
+    font-weight: bold;
+}
+
+footer {
+    background-color: #222;
+    color: #aaa;
+    padding: 20px;
+    margin-top: 40px;
+    font-size: 0.9rem;
+}

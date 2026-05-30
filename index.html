@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ruletica Clon - ¡La que más paga!</title>
+    <link rel="stylesheet" href="styles.css">
+    
+    <!-- CONEXIÓN CORECTA Y COMPLETA A FIREBASE (No la borres) -->
+    <script src="https://gstatic.com"></script>
+    <script src="https://gstatic.com"></script>
+</head>
+<body>
+
+    <!-- Encabezado / Navbar -->
+    <header>
+        <div class="logo">🎰 Ruletica Clon</div>
+        <nav>
+            <a href="index.html">Inicio</a>
+            <a href="resultados.html" target="_blank">Resultados</a>
+            <a href="#">Preguntas Frecuentes</a>
+        </nav>
+    </header>
+
+    <!-- Héroe / Banner Principal -->
+    <section class="hero">
+        <h1>Elige tu animalito ganador</h1>
+        <p>Tienes 38 opciones para ganar en grande. ¡Premios cada 10 minutos!</p>
+        
+        <!-- Contenedor del Sorteo en Vivo -->
+        <div class="sorteo-box">
+            <div id="ruleta-visual">❓</div>
+            <button id="btn-girar">Girar Ruleta</button>
+        </div>
+        <h2 id="resultado-texto">Cargando temporizador...</h2>
+    </section>
+
+    <!-- Historial de los últimos 5 sorteos -->
+    <section class="historial-rapido">
+        <h2>Últimos 5 Sorteos (En Vivo)</h2>
+        <div class="historial-lista" id="historial-lista">
+            <!-- Los 5 círculos se insertan automáticamente -->
+        </div>
+    </section>
+
+    <!-- Tabla de Multiplicadores de Premios -->
+    <section class="premios-tabla">
+        <h2>Multiplicadores de Apuestas</h2>
+        <div class="grid-premios">
+            <div class="premio-card"><h3>Acierta Ganador</h3><p>Ganas <strong>30x</strong> tu apuesta</p></div>
+            <div class="premio-card"><h3>La Guacharaca</h3><p>Ganas <strong>60x</strong> tu apuesta</p></div>
+            <div class="premio-card"><h3>Vecinos</h3><p>Ganas <strong>2x</strong> tu apuesta</p></div>
+        </div>
+    </section>
+
+    <!-- Panel de Selección de Animalitos -->
+    <section class="animalitos-section">
+        <h2>Panel de Animalitos (38 Opciones)</h2>
+        <div class="grid-animalitos" id="panel-animalitos"></div>
+    </section>
+
+    <footer>
+        <p>&copy; 2026 Ruletica Clon. Solo para mayores de +18 años.</p>
+    </footer>
+
+    <!-- Carga del script de programación al final -->
+    <script src="script.js"></script>
+</body>
+</html>
